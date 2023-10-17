@@ -1,88 +1,64 @@
+.curri {
+  background-color: bisque;
+  background: radial-gradient(ellipse at top, bisque, rgb(212, 186, 153)),
+    radial-gradient(ellipse at bottom, rgb(241, 220, 194), rgb(216, 195, 170));
 
-.curri{
-    background-color: bisque ;
-    background: radial-gradient(ellipse at top,bisque, rgb(212, 186, 153)),
-            radial-gradient(ellipse at bottom, rgb(241, 220, 194), rgb(216, 195, 170));
-    
-    padding: 1rem;
-    width: fit-content;
+  padding: 1rem;
+  width: fit-content;
 
-   
-    transition: all 1s;
-    // min-height: 100vh;
-   
-    // transform: scale(6) rotate(47deg) translate(-34%, 7%);
-   
-    display: grid;
-    // overflow: hidden;
-    grid-template-areas: " ex ex tt" 
-                         " fo lg ed"
-                         " fo ci ed";
-    grid-template-columns:30rem 30rem 30rem;
-    grid-template-rows: 30rem 30rem 30rem;
-    gap: 1rem;
-    // transform: rotate(90deg);
+  transition: all 1s;
 
-     &__container{
-        height: 650vh;
-        background-color: rgb(7, 43, 0);
-        padding-top: 3rem;
-        padding-right: 3rem;
-        padding-left: 20rem;
+  display: grid;
+  grid-template-areas:
+    " ex ex tt"
+    " fo lg ed"
+    " fo ci ed";
+  grid-template-columns: 30rem 30rem 30rem;
+  grid-template-rows: 30rem 30rem 30rem;
+  gap: 1rem;
 
-    }
-    &__content{
-        position: sticky;
-        top: 0;
-    }
+  &__container {
+    height: 650vh;
+    background-color: rgb(7, 43, 0);
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-left: 20rem;
+  }
+  &__content {
+    position: sticky;
+    top: 0;
+  }
 
-    &__title{
-        grid-area: tt;
-        color: black;
-        
-        padding: 2rem;
-        margin: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Cookie', cursive;
-        font-size: 7rem;
-        text-align: center;
-        text-transform: capitalize;
-        transform: rotate(45deg);
-      
+  &__title {
+    grid-area: tt;
+    color: black;
 
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cookie", cursive;
+    font-size: 7rem;
+    text-align: center;
+    text-transform: capitalize;
+    transform: rotate(45deg);
+  }
 
-        
-
-    }
-
-    &__card--ex{
-        grid-area: ex;
-        height: 100%;
-      
-    }
-    &__card--ed{
-        grid-area: ed;
-       
-    }
-    &__card--fo{
-        grid-area: fo;
-      
-    }
-    &__card--lg{
-        grid-area: lg;
-       
-    }
-    &__card--ci{
-        grid-area: ci;
-      
-    }
-    
+  &__card--ex {
+    grid-area: ex;
+    height: 100%;
+  }
+  &__card--ed {
+    grid-area: ed;
+  }
+  &__card--fo {
+    grid-area: fo;
+  }
+  &__card--lg {
+    grid-area: lg;
+  }
+  &__card--ci {
+    grid-area: ci;
+  }
 }
-
-
-
-    
-
-

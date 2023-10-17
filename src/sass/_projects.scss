@@ -1,315 +1,304 @@
-
-.projects{
-    background-color: rgb(122, 153, 144);
-    color: white;
-    height: 650vh;
-    &__container{
-        position: sticky;
-        top: 0;
-        display: flex;
-        align-items: center;
-        height: 100vh;
-    }
-}
-.tvs{
+.projects {
+  background-color: rgb(122, 153, 144);
+  color: white;
+  height: 650vh;
+  &__container {
+    position: sticky;
+    top: 0;
     display: flex;
-    gap: 4rem;
+    align-items: center;
+    height: 100vh;
+  }
+}
+.tvs {
+  display: flex;
+  gap: 4rem;
 }
 
-.bor{
-    border: 2px solid bisque;
-   height: 20rem;
-   width: 30rem;
-  
-   background-color: rgb(212, 184, 117);
-   padding: 1rem;
-   background-color: rgb(73, 21, 21);
+.bor {
+  border: 2px solid bisque;
+  height: 20rem;
+  width: 30rem;
+
+  background-color: rgb(212, 184, 117);
+  padding: 1rem;
+  background-color: rgb(73, 21, 21);
 }
-.bigbor{
-    border: 1px solid rgb(0, 0, 0);
-    height:100%;
-    width: 100%; 
+.bigbor {
+  border: 1px solid rgb(0, 0, 0);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  border-radius: 5px;
+}
+.screensq {
+  border: 1px solid rgb(0, 0, 0);
+  height: 95%;
+  width: 75%;
+  box-shadow: inset -7px 0 30px black;
+  background-color: brown;
+  margin: 0.5rem;
+}
+
+.screen {
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  height: 90%;
+  width: 90%;
+  margin: 1rem;
+  border-radius: 150% 150% 150% 150%/40% 40% 40% 40%;
+  overflow: hidden;
+  color: black;
+  z-index: 20;
+}
+.screen2 {
+  border-right: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  height: 100%;
+  width: 100%;
+
+  background-color: bisque;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40% 40% 40% 40%/ 150% 150% 150% 150%;
+}
+
+.control {
+  border-left: 1px solid rgb(0, 0, 0);
+  height: 100%;
+}
+.switch {
+  background-color: rgb(49, 49, 49);
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 5rem;
+  height: 40%;
+  margin: 0.5rem;
+}
+.sound {
+  width: 5rem;
+  height: 50%;
+  margin: 0.5rem;
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 5px 4px;
+}
+.circle {
+  height: 3rem;
+  width: 3rem;
+  border: 2px dotted rgb(87, 86, 86);
+  border-radius: 50%;
+  margin: 2px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circlesm {
+  height: 2rem;
+  width: 2rem;
+  background-color: rgb(63, 63, 63);
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset -1px 0 3px rgb(39, 38, 38);
+
+  &--1 {
+    transform: rotate(20deg);
+  }
+  &--2 {
+    transform: rotate(73deg);
+  }
+}
+.rect {
+  width: 16px;
+  height: 7px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rectsm {
+  width: 16px;
+  height: 4px;
+  background-color: rgb(83, 76, 76);
+}
+.papattes {
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+}
+.papatte {
+  height: 3px;
+  width: 5px;
+  background-color: rgb(39, 39, 39);
+  margin: 0 9px;
+}
+.antenna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+}
+.socle {
+  background-color: rgb(105, 104, 103);
+  width: 4rem;
+  height: 1.5rem;
+  border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
+  box-shadow: inset 5px 0 8px rgb(73, 73, 73);
+  border: 1px solid rgb(68, 67, 67);
+}
+.horns {
+  display: flex;
+}
+.horn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--1 {
+    transform: rotate(30deg) translate(15px, -4px);
+    transform-origin: bottom center;
+  }
+  &--2 {
+    transform: rotate(-30deg) translate(-15px, -4px);
+    transform-origin: bottom center;
+  }
+}
+.hr {
+  height: 5rem;
+  border-right: 1px solid rgb(78, 78, 78);
+}
+.hr1 {
+  background-color: rgb(92, 91, 91);
+
+  width: 1px;
+}
+.hr2 {
+  width: 3px;
+  background-color: rgb(88, 88, 87);
+}
+.hr3 {
+  width: 4px;
+  background-color: rgb(103, 102, 104);
+}
+.hrtip {
+  height: 4px;
+  width: 3px;
+  background-color: rgb(112, 112, 112);
+}
+
+.pic {
+  height: 100%;
+  filter: grayscale(100%);
+}
+.betterpic {
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(
+      circle,
+      transparent 40%,
+      rgba(112, 110, 110, 0.411) 75%
+    ),
+    url("https://images.unsplash.com/photo-1613318286980-4b3dd8475772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80");
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position: center center;
+
+  background-blend-mode: color-burn;
+}
+
+.shelf {
+  width: 70vw;
+  height: 2rem;
+  background-color: brown;
+  box-shadow: inset 0 1px 30px rgba(0, 0, 0, 0.685), 5px 15px 30px rgb(0, 0, 0);
+  z-index: 100;
+}
+.project {
+  margin-left: 20rem;
+  // position: sticky;
+  // top: 0;
+  width: 100vw;
+  &__item {
     display: flex;
-   align-items: center;
-   background-color: gray;
-   border-radius: 5px;
-}
-.screensq{
-    border: 1px solid rgb(0, 0, 0);
-    height: 95%;
-    width: 75%;
-    box-shadow: inset -7px 0 30px black;
-    background-color: brown;
-    margin: .5rem;
-}
-
-
-.screen{
-    border-top: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-    height: 90%;
-    width: 90%;
-    margin: 1rem;
-    border-radius: 150% 150% 150% 150%/40% 40% 40% 40%;
-    overflow: hidden;
-    color: black;
-    z-index: 20;
-}
-.screen2{
-    border-right: 2px solid currentColor;
-    border-left: 2px solid currentColor;
+    align-items: flex-end;
+    perspective: 150rem;
+    justify-content: center;
+    gap: 5rem;
+  }
+  &__link-container {
     height: 100%;
     width: 100%;
-    
-    background-color: bisque;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40% 40% 40% 40%/ 150% 150% 150% 150%;
-}
-
-.control{
-    border-left: 1px solid rgb(0, 0, 0);
+    position: relative;
+  }
+  &__pic {
     height: 100%;
-}
-.switch{
-    background-color: rgb(49, 49, 49);
-    border: 1px solid black;
-    border-radius: 3px;
-    width: 5rem;
-    height: 40%;
-    margin: .5rem;
-}
-.sound{
-    width: 5rem;
-    height: 50%;
-    margin: .5rem;
-    background-image: radial-gradient(black 1px, transparent 0);
-    background-size: 5px 4px;
-}
-.circle{
-    height: 3rem;
-    width: 3rem;
-    border: 2px dotted rgb(87, 86, 86);
-    border-radius: 50%;
-    margin: 2px auto;
+    transition: all 0.5s;
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.circlesm{
-    height: 2rem;
-    width: 2rem;
-    background-color: rgb(63, 63, 63);
-    border: 2px solid gray;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset -1px 0 3px rgb(39, 38, 38);
+    font-size: 5rem;
+    right: 0;
 
-    &--1{
-        transform: rotate(20deg);
+    z-index: 8;
+    color: transparent;
+    background-image: radial-gradient(transparent, rgb(124, 122, 122));
+    transition: all 0.5s;
+    &:hover {
+      color: black;
+      & + .project__pic {
+        filter: blur(10px);
+      }
     }
-    &--2{
-        transform: rotate(73deg);
-    }
-    
-}
-.rect{
-    width: 16px;
-    height: 7px;
-    background-color: gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.rectsm{
-    width: 16px;
-    height: 4px;
-    background-color: rgb(83, 76, 76);
-
-}
-.papattes{
-    width: 30rem;
-    display: flex;
-    justify-content: space-between;
-
-}
-.papatte{
-    height: 3px;
-    width: 5px;
-    background-color: rgb(39, 39, 39);
-    margin: 0 9px ;
-}
-.antenna{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30rem;
-
-}
-.socle{
-    background-color: rgb(105, 104, 103);
-    width: 4rem;
-    height: 1.5rem;
-    border-radius: 50% 50% 100% 0% / 100% 100% 0% 0%;
-    box-shadow: inset 5px 0 8px rgb(73, 73, 73);
-    border: 1px solid rgb(68, 67, 67);
-}
-.horns{
-    display: flex;
-}
-.horn{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &--1{
-        transform: rotate(30deg)  translate(15px, -4px);
-        transform-origin: bottom center;
-    }
-    &--2{
-        transform: rotate(-30deg) translate(-15px, -4px);
-        transform-origin: bottom center;
-    }
-}
-.hr{
-    height: 5rem;
-    border-right: 1px solid rgb(78, 78, 78);
-}
-.hr1{
-    background-color: rgb(92, 91, 91);
-
-    width: 1px;
-}
-.hr2{
-    width:  3px;
-    background-color: rgb(88, 88, 87);
-}
-.hr3{
-    width:  4px;
-    background-color: rgb(103, 102, 104);
-}
-.hrtip{
-    height: 4px;
-    width: 3px;
-    background-color: rgb(112, 112, 112);
+  }
 }
 
-.pic{
-    height: 100%;
-    filter: grayscale(100%);
-}
-.betterpic{
+.board {
+  margin-bottom: 1px;
+  z-index: 0;
+  height: max-content;
+  width: 25rem;
+  font-family: "Love Ya Like A Sister", cursive;
+  transform: rotateX(10deg);
+  padding: 5px;
+
+  background-color: rgb(204, 181, 152);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -1px 30px rgba(0, 0, 0, 0.685),
+    inset 0 1px 3px rgba(0, 0, 0, 0.685);
+  &__border {
+    padding: 1rem;
     height: 100%;
     width: 100%;
-    background-image:radial-gradient(circle, transparent 40%,rgba(112, 110, 110, 0.411) 75%), url("https://images.unsplash.com/photo-1613318286980-4b3dd8475772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80");
-    filter: grayscale(100%);
-    background-size: cover;
-    background-position: center center;
+    background-color: rgb(27, 27, 27);
+  }
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+  }
 
-    background-blend-mode: color-burn;
-}
-
-
-
-.shelf{
-    width: 70vw;
-    height: 2rem;
-    background-color: brown;
-    box-shadow: inset 0 1px 30px rgba(0, 0, 0, 0.685),
-                5px 15px 30px rgb(0, 0, 0) ;
-    z-index: 100;
-
-    
-}
-.project{
-    margin-left: 20rem;
-    // position: sticky;
-    // top: 0;
-    width: 100vw;
-    &__item{
-        display: flex;
-        align-items: flex-end;
-        perspective: 150rem;
-        justify-content: center;
-        gap: 5rem;
-    }
-    &__link-container{
-        height: 100%;
-        width: 100%;
-        position: relative;
-
-    }
-    &__pic{
-        height: 100%;
-        transition: all .5s;
-        
-    }
-    &__link{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 5rem;
-        right: 0;
-
-        z-index: 8;
-        color: transparent;
-        background-image: radial-gradient(transparent,rgb(124, 122, 122) );
-        transition: all .5s;
-        &:hover{
-                color: black;
-            & + .project__pic{
-                filter: blur(10px);
-               
-            }
-        }
-    }
-
-}
-
-.board{
-    margin-bottom: 1px;
-    z-index: 0;
-    height:max-content;
-    width: 25rem; 
-    font-family: 'Love Ya Like A Sister', cursive;
-    transform: rotateX(10deg);
-    padding: 5px;
-    
-    background-color: rgb(204, 181, 152);
+  &__tech {
     display: flex;
+    // gap: 1rem;
+    margin-bottom: 2rem;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 -1px 30px rgba(0, 0, 0, 0.685), inset 0 1px 3px rgba(0, 0, 0, 0.685);
-    &__border{
-        padding: 1rem;
-        height: 100%;
-        width: 100%;
-        background-color: rgb(27, 27, 27);
+    font-size: 1.6rem;
+    justify-content: space-evenly;
+    &__react {
+      height: 5rem;
     }
-    &__title{
-       
-        text-align: center;
-        font-size: 2rem;
-        padding: 2rem;
-    }
-
-    &__tech{
-        display: flex;
-        // gap: 1rem;
-        margin-bottom: 2rem;
-        align-items: center;
-        font-size: 1.6rem;
-        justify-content: space-evenly;
-        &__react{
-            height: 5rem;
-        }
-    }
+  }
 }
