@@ -1,0 +1,221 @@
+.for {
+  border: 30px solid transparent;
+  border-image: url(../border2e.png) 340;
+  color: black;
+  height: 100%;
+  width: 100%;
+  &__title {
+    border: 20px solid transparent;
+    border-image: url(../border2e.png) 340;
+    font-family: "Abril Fatface", serif;
+    text-align: center;
+    font-size: 3rem;
+  }
+  &__items {
+    border: 20px solid transparent;
+    border-image: url(../border2e.png) 340;
+  }
+  &__item {
+    text-align: center;
+    &__date {
+      font-family: "Abril Fatface", serif;
+    }
+
+    &__position {
+      font-family: "Abril Fatface", serif;
+      font-size: 1.5rem;
+    }
+    &__description {
+      font-family: "Abril Fatface", serif;
+      font-size: 1.2rem;
+    }
+    &__divider {
+      height: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.exp {
+  border: 30px solid orange;
+  border-image: url(../border4e.png) 110;
+  color: black;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  &__title {
+    margin-top: -3rem;
+    margin-bottom: -2rem;
+    font-family: "Bevan", serif;
+    text-transform: uppercase;
+    font-size: 5rem;
+  }
+
+  &__img {
+    position: absolute;
+
+    bottom: -2rem;
+    left: 35%;
+    height: 9rem;
+  }
+  &__items {
+    display: flex;
+    font-family: "DM Serif Display", serif;
+    gap: 2rem;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    &__date {
+      font-size: 1.6rem;
+    }
+    &__position {
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 0.5rem;
+
+      background-color: black;
+      border: 7px double bisque;
+      color: bisque;
+    }
+    &__description {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+  }
+  &__desc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.edu {
+  border: 30px solid transparent;
+  border-image: url(../border3e.png) 140;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  &__title {
+    font-family: "DM Serif Display", serif;
+    text-transform: uppercase;
+    font-size: 5rem;
+  }
+  &__img {
+    height: 10rem;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  &__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+    &__description {
+      font-family: "Playball", cursive;
+      font-size: 1.8rem;
+    }
+    &__date {
+      font-family: "DM Serif Display", serif;
+      font-size: 1.5rem;
+    }
+    &__position {
+      font-family: "DM Serif Display", serif;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.lan {
+  border-top: 10px double #ffe4c4;
+  border: 10px double transparent;
+
+  background-color: black;
+
+  color: bisque;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  &__title {
+    font-family: "Rye", serif;
+    font-size: 5rem;
+    text-transform: capitalize;
+    writing-mode: vertical-lr;
+    padding: 0.5rem;
+  }
+  &__img {
+    height: 15rem;
+    width: 15rem;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &__group {
+    display: flex;
+    gap: 3rem;
+  }
+  &__item {
+    background-color: black;
+    font-family: "Rye", serif;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__date {
+      font-family: "Rye", serif;
+    }
+  }
+}
+
+.hob {
+  border: 30px solid transparent;
+  border-image: url(../border1e.png) 140;
+  color: black;
+  height: 100%;
+  width: 100%;
+  &__title {
+    font-family: "Cookie", cursive;
+    line-height: 4rem;
+    text-transform: capitalize;
+    font-size: 6rem;
+    text-align: center;
+  }
+  &__img {
+    height: 15rem;
+  }
+  &__items {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &__item {
+    transform: skew(5deg, -20deg);
+  }
+  &__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}

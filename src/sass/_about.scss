@@ -1,0 +1,95 @@
+.about {
+  background-color: rgb(155, 106, 0);
+  font-family: "Love Ya Like A Sister", cursive;
+
+  height: 650vh;
+
+  color: black;
+  & h2 {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.664);
+  }
+  &__title__container {
+    box-shadow: 1px 0 15px rgba(136, 115, 70, 0.459),
+      inset 0 0 15px rgba(221, 193, 132, 0.459);
+    padding: 2rem 6rem;
+    background-color: rgb(245, 239, 231);
+  }
+  &__border {
+    position: sticky;
+    top: 0;
+    width: 135rem;
+    height: 70rem;
+    background-color: rgb(117, 3, 3);
+
+    padding: 2rem;
+    // position: relative;
+    box-shadow: inset 0 0 25px rgba(77, 5, 5, 0.459),
+      1px 0 15px rgba(20, 20, 20, 0.459);
+  }
+  &__filler {
+    width: 100rem;
+    height: 100%;
+    background-color: antiquewhite;
+    box-shadow: inset 0 0 25px rgba(185, 165, 120, 0.459);
+    &__border {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      padding-right: 2rem;
+      width: 100rem;
+
+      position: absolute;
+      right: -98rem;
+      top: 0;
+      bottom: 0;
+      background-color: rgb(117, 3, 3);
+      box-shadow: inset 0 0 25px rgba(77, 5, 5, 0.459),
+        1px 0 15px rgba(20, 20, 20, 0.459);
+    }
+  }
+  &__container {
+    z-index: -10;
+    flex-direction: column;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    background-color: antiquewhite;
+    box-shadow: inset 0 0 25px rgba(185, 165, 120, 0.459),
+      1px 0 15px rgba(20, 20, 20, 0.459);
+
+    & p {
+      font-size: 1.6rem;
+      padding-left: 20rem;
+      color: black;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img-container {
+    margin: 2rem;
+
+    overflow: hidden;
+
+    flex: 0 0 34rem;
+    background-color: white;
+    box-shadow: inset 0 0 15px rgba(165, 145, 100, 0.459),
+      1px 0 15px rgba(136, 115, 70, 0.459);
+    transform: rotate(10deg);
+  }
+  &__img__border {
+    margin: 2rem;
+    margin-bottom: 8rem;
+    overflow: hidden;
+    height: 30rem;
+    width: 30rem;
+  }
+
+  &__img {
+    height: 100%;
+  }
+}

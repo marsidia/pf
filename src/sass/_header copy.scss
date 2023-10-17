@@ -1,0 +1,165 @@
+@font-face {
+    font-family: Sunday;
+    src: url('../Sunday.otf');
+}
+.header{
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // margin: 0 auto;
+    color: #867474;
+    height: 350vh;
+    // overflow-x: hidden;
+    // width: 100vw;
+    &__name{
+        font-size: 5rem;
+        font-family: 'Poppins', sans-serif; 
+        // font-weight: 200;
+    }
+    &__title{
+        font-family: 'Sunday', sans-serif;
+       
+    }
+}
+.form{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // align-self: flex-start;
+}
+.items{
+    position: sticky;
+    top: 10%;
+    // left: 50%;
+    height: 80vh;
+    width: 80vh;
+    // background-color: orange;
+    // border-radius: 50%;
+    
+    // z-index: -1;
+    
+}
+.item{
+    height: 8rem;
+    width: 8rem;
+    // height: 20rem;
+
+    // background-color: rgb(255, 255, 255);
+    border-radius: 50rem;
+    border: 3px dotted white;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    color: white;
+       transition: color .5s;
+   
+    transform: scale(0);
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        height: 90%;
+        width: 90%;
+        background-color: currentColor;
+        border-radius: 50rem;
+        // z-index: 40;
+       
+    } 
+    &--1{
+        left: -1rem;
+        top: -1rem; 
+        // opacity: 0;
+       
+       
+        &:hover{
+             color: rgb(155, 106, 0);
+             transform: translateX(10rem);
+        }
+        
+    }
+    &--2{
+        right: -1rem;
+        top: -1rem;
+        // background-color: #00ff2a;
+        &:hover{
+            color: rgb(47, 125, 156);
+       }
+    }
+    &--3{
+        
+        top: -10rem;
+        right: calc(50% - 4rem);
+        // background-color: #ff00b3;
+        &:hover{
+            color: rgb(204, 139, 139);
+       }
+    }
+    &__title{
+        transform: rotate(0deg) translateY(40rem);
+        font-size: 3rem;
+        color: currentColor;
+        font-family: 'Sunday', sans-serif;
+        // &:hover{
+        //     color: green;
+        // }
+        
+    }
+
+    &__titlecont{
+        height: 30rem;
+        overflow: hidden;
+        transform: translateY(-30rem);
+        z-index: 10000;
+        cursor: pointer;
+        // background-color: aquamarine;
+    }
+    &__und{
+        height: 3rem;
+        width: 50rem;
+        background-color: rgb(40, 134, 52);
+        position: absolute;
+        top: 50%;
+        transform: translate(30%, -50%);
+    }
+
+}
+.card2{
+    height: 80vh;
+    width: 80vw;
+    background-color: rgb(204, 33, 33);
+}
+.change{
+    border-radius: 50rem;
+}
+.container{
+    height: 350vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    // justify-content: center;
+    
+}
+.header__nav-checker{
+    transform: translateY(20rem);
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(0, 17, 255);
+}
