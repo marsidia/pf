@@ -1,4 +1,4 @@
-import divider from "../divider.png";
+import divider from "../img/divider.png";
 function Formations() {
   const data = [
     {
@@ -30,7 +30,7 @@ function Formations() {
 
   const items = data.map((item, idx) => {
     return (
-      <div className="for__item">
+      <div className="for__item" key={idx}>
         <div className="for__desc-container">
           <div className="for__item__date">{item.date}</div>
 

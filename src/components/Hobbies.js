@@ -1,4 +1,4 @@
-import camera from "../camera.png";
+import camera from "../img/camera.png";
 function Hobbies() {
   return (
     <div className="hob">

@@ -1,4 +1,4 @@
-import hat from "../hat.png";
+import hat from "../img/hat.png";
 
 function Education() {
   const data = [
@@ -19,11 +19,9 @@ function Education() {
     },
   ];
 
-  const items = data.map((item) => {
+  const items = data.map((item, idx) => {
     return (
-      <div className="edu__item">
-        {/* <img className="edu__img" src={hat} alt="hat"></img> */}
-
+      <div className="edu__item" key={idx}>
         <div className="edu__desc-container">
           <div className="edu__item__date">{item.date}</div>
 

@@ -1,4 +1,4 @@
-import books from "../books2.png";
+import books from "../img/books2.png";
 function Experience() {
   const data = [
     {
@@ -18,9 +18,9 @@ function Experience() {
     },
   ];
 
-  const items = data.map((item) => {
+  const items = data.map((item, idx) => {
     return (
-      <div className="exp__item">
+      <div className="exp__item" key={idx}>
         <div className="exp__desc-container">
           <div className="exp__item__date">{item.date}</div>
 

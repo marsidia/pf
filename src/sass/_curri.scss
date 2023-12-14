@@ -1,10 +1,13 @@
 .curri {
   background-color: bisque;
+  cursor: pointer;
+  position: relative;
   background: radial-gradient(ellipse at top, bisque, rgb(212, 186, 153)),
     radial-gradient(ellipse at bottom, rgb(241, 220, 194), rgb(216, 195, 170));
 
   padding: 1rem;
   width: fit-content;
+  z-index: 50;
 
   transition: all 1s;
 
@@ -15,18 +18,52 @@
     " fo ci ed";
   grid-template-columns: 30rem 30rem 30rem;
   grid-template-rows: 30rem 30rem 30rem;
+  @media screen and (max-width: 900px) {
+    grid-template-areas:
+      " tt tt"
+      " ex ex"
+      " fo ed"
+      "fo ed"
+      "lg ci";
+    grid-template-columns: 30rem 30rem;
+    grid-template-rows: 20rem 30rem 30rem 30rem 30rem;
+  }
+
   gap: 1rem;
 
-  &__container {
-    height: 650vh;
-    background-color: rgb(7, 43, 0);
-    padding-top: 3rem;
-    padding-right: 3rem;
-    padding-left: 20rem;
-  }
   &__content {
-    position: sticky;
-    top: 0;
+    transform: scale(0.4) translateX(-50%) rotate(-7deg);
+    transition: all 0.4s;
+    @media screen and (max-width: 700px) {
+      transform: scale(0.4) rotate(-2deg);
+    }
+
+    &.active {
+      transform: scale(1);
+      @media screen and (max-width: 550px) {
+        transform: scale(0.7);
+      }
+      @media screen and (max-width: 390px) {
+        transform: scale(5);
+      }
+      &:hover {
+        box-shadow: none;
+        transform: scale(1);
+        @media screen and (max-width: 550px) {
+          transform: scale(0.7);
+        }
+        @media screen and (max-width: 390px) {
+          transform: scale(0.5);
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 5px 0 400px black;
+      transform: scale(0.45) translateX(-50%) rotate(-7deg);
+      @media screen and (max-width: 700px) {
+        transform: scale(0.45) rotate(-7deg);
+      }
+    }
   }
 
   &__title {
@@ -43,6 +80,9 @@
     text-align: center;
     text-transform: capitalize;
     transform: rotate(45deg);
+    @media screen and (max-width: 900px) {
+      transform: rotate(25deg);
+    }
   }
 
   &__card--ex {
@@ -60,5 +100,22 @@
   }
   &__card--ci {
     grid-area: ci;
+  }
+  &__text {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    color: rgb(236, 161, 108);
+    font-size: 5rem;
+    font-family: "Cookie", cursive;
+    z-index: 0;
+    cursor: pointer;
+    @media screen and (max-width: 700px) {
+      position: absolute;
+      top: 20rem;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
   }
 }

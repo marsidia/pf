@@ -1,13 +1,39 @@
 .about {
-  background-color: rgb(155, 106, 0);
-  font-family: "Love Ya Like A Sister", cursive;
-
-  height: 650vh;
-
   color: black;
+  margin-top: 20rem;
+  position: relative;
   & h2 {
     font-size: 2rem;
     color: rgba(0, 0, 0, 0.664);
+  }
+  &__st {
+    font-family: "Love Ya Like A Sister", cursive;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.4) translateX(-50%) rotate(-17deg);
+    transition: all 0.4s;
+    @media screen and (max-width: 700px) {
+      transform: scale(0.4) translateY(50%) rotate(-17deg);
+    }
+    &.active {
+      transform: scale(1);
+      & .about__filler__border {
+        transform: rotateY(-90deg);
+      }
+      &:hover {
+        box-shadow: none;
+        transform: scale(1);
+      }
+    }
+    &:hover {
+      box-shadow: 5px 0 400px black;
+      transform: scale(0.45) translateX(-50%) rotate(-17deg);
+      @media screen and (max-width: 700px) {
+        transform: scale(0.45) translateY(50%) rotate(-17deg);
+      }
+    }
   }
   &__title__container {
     box-shadow: 1px 0 15px rgba(136, 115, 70, 0.459),
@@ -16,35 +42,52 @@
     background-color: rgb(245, 239, 231);
   }
   &__border {
-    position: sticky;
-    top: 0;
-    width: 135rem;
-    height: 70rem;
-    background-color: rgb(117, 3, 3);
-
+    margin: auto;
+    width: 90vw;
+    height: 50vw;
+    background-color: rgb(31, 48, 34);
+    perspective: 120rem;
     padding: 2rem;
-    // position: relative;
     box-shadow: inset 0 0 25px rgba(77, 5, 5, 0.459),
       1px 0 15px rgba(20, 20, 20, 0.459);
+    @media screen and (max-width: 700px) {
+      width: 90vw;
+      height: max-content;
+    }
   }
   &__filler {
-    width: 100rem;
+    width: 100%;
     height: 100%;
-    background-color: antiquewhite;
-    box-shadow: inset 0 0 25px rgba(185, 165, 120, 0.459);
+    background-color: rgb(2, 44, 32);
+    background-image: radial-gradient(rgb(42, 63, 45), rgb(31, 48, 32));
+    box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.158);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &__border {
+      transition: all 0.4s;
       padding-top: 2rem;
       padding-bottom: 2rem;
       padding-right: 2rem;
-      width: 100rem;
+      width: 100%;
 
       position: absolute;
-      right: -98rem;
       top: 0;
       bottom: 0;
-      background-color: rgb(117, 3, 3);
+      background-color: rgb(38, 53, 36);
       box-shadow: inset 0 0 25px rgba(77, 5, 5, 0.459),
-        1px 0 15px rgba(20, 20, 20, 0.459);
+        0 0 25px rgba(20, 20, 20, 0.596);
+      transform-origin: left;
+    }
+    &__text {
+      font-family: "Playball", cursive;
+
+      font-size: 5rem;
+      @media screen and (max-width: 900px) {
+        font-size: 2rem;
+      }
+      color: goldenrod;
+      text-shadow: 0 0 15px black;
     }
   }
   &__container {
@@ -60,14 +103,21 @@
       1px 0 15px rgba(20, 20, 20, 0.459);
 
     & p {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       padding-left: 20rem;
       color: black;
+      @media screen and (max-width: 900px) {
+        font-size: 1.2rem;
+        padding: 3rem;
+      }
     }
   }
   &__content {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+    }
   }
 
   &__img-container {
@@ -75,21 +125,48 @@
 
     overflow: hidden;
 
-    flex: 0 0 34rem;
+    flex: 0 0 23vw;
     background-color: white;
     box-shadow: inset 0 0 15px rgba(165, 145, 100, 0.459),
       1px 0 15px rgba(136, 115, 70, 0.459);
     transform: rotate(10deg);
+    @media screen and (max-width: 700px) {
+      flex: 0 0 50vw;
+    }
   }
   &__img__border {
-    margin: 2rem;
-    margin-bottom: 8rem;
+    margin: 1vw;
+    margin-bottom: 5vw;
     overflow: hidden;
-    height: 30rem;
-    width: 30rem;
+    height: 21vw;
+    width: 21vw;
+    @media screen and (max-width: 700px) {
+      margin: 2vw;
+      height: 40vw;
+      width: 40vw;
+    }
   }
 
   &__img {
     height: 100%;
+  }
+  &__text {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 30rem;
+    color: rgb(236, 161, 108);
+    font-size: 5rem;
+    font-family: "Cookie", cursive;
+    z-index: 0;
+    @media screen and (max-width: 700px) {
+      position: absolute;
+      top: 20rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30rem;
+      text-align: center;
+    }
   }
 }

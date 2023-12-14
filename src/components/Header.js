@@ -2,60 +2,81 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Envelope from "./Envelope";
-import Radio from "./Radio";
+import Curriculum from "./Curriculum";
+import About from "./About";
+import Mug from "./Mug";
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import computer from "../img/computer.jpg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Header() {
   const headref = useRef(null);
 
-  const contref = useRef(null);
-  const envref = useRef(null);
   useEffect(() => {
-    window.scrollTo(0, 1);
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: headref.current,
-        markers: true,
-        start: "top top",
-        end: "bottom bottom",
-
-        scrub: 1,
-        // pin: el,
-        // pinSpacing: true,
-      },
-    });
-
+    const tl = gsap.timeline();
     tl.fromTo(
-      contref.current,
+      headref.current,
       {
-        transform: "scale(6) rotate(47deg) translate(-34%, 7%)",
-        zIndex: 10,
+        opacity: 0,
       },
       {
-        transform: "scale(1)  ",
-      }
-    );
-    tl.fromTo(
-      contref.current,
-      {
-        transform: "scale(1) ",
-        zIndex: 10,
-      },
-      {
-        transform: "scale(2.5) rotate(-67deg) translate(28%, 3%)  ",
+        opacity: 1,
       }
     );
   }, []);
+  const navigate = useNavigate();
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const onProjNav = () => {
+    const timer = setTimeout(() => {
+      navigate("/projects");
+    }, 1000);
+    gsap.fromTo(
+      headref.current,
+      {
+        transform: "rotateX(0)",
+      },
+      {
+        transform: "rotateX(90deg)",
+        opacity: 0,
+        rotateX: 30,
+        y: 500,
+      }
+    );
+    return () => clearTimeout(timer);
+  };
 
   return (
-    <div className="header">
-      <div className="header__content" ref={contref}>
-        <div className="header__env" ref={envref}>
+    <div className="header" ref={headref}>
+      <div className="header__content">
+        <h2 className="header__main-title">Maria Sidko portfolio</h2>
+        <div className="header__mug">
+          <Mug />
+        </div>
+        <div className="header__about">
+          <About open={isAboutOpen} setOpen={setIsAboutOpen} />
+        </div>
+
+        <div className="header__curri">
+          <Curriculum />
+        </div>
+
+        <div className="header__env">
           <Envelope />
         </div>
+
         <div className="header__container">
-          <Radio />
+          <div className="header__projects" onClick={onProjNav}>
+            <img
+              className="header__projects__img"
+              src={computer}
+              alt="computer"
+            />
+          </div>
+          <div className="header__projects__text" onClick={onProjNav}>
+            Voir mon travail
+          </div>
         </div>
       </div>
     </div>

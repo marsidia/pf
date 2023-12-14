@@ -1,54 +1,23 @@
-import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Menu from "./Menu";
 import Experience from "./Experience";
 import Formations from "./Formations";
 import Education from "./Education";
 import Langues from "./Langues";
 import Hobbies from "./Hobbies";
-import { useRef } from "react";
+import useAutoClose from "../hooks/use-auto-close";
 gsap.registerPlugin(ScrollTrigger);
 
 function Curriculum() {
-  const curriRef = useRef(null);
-  const paperRef = useRef(null);
-
-  useEffect(() => {
-    window.scrollTo(0, 1);
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: curriRef.current,
-        markers: true,
-        start: "top top",
-        end: "bottom bottom",
-
-        scrub: 1,
-        // pin: el,
-        // pinSpacing: true,
-      },
-    });
-    tl.fromTo(
-      paperRef.current,
-      {
-        transform: "scale(.4) translateY(-50%) rotate(-7deg) skew(5deg, 5deg)",
-        zIndex: 10,
-      },
-      {
-        transform: "scale(1)  ",
-      }
-    );
-  }, []);
+  const { isOpen, setIsOpen, divEl } = useAutoClose();
+  const className = isOpen ? "curri__content active" : "curri__content";
   return (
     <div className="curri__container">
-      <Menu
-        titles={[
-          { title: "Contact", route: "/" },
-          { title: "A propos", route: "/about" },
-          { title: "Projets", route: "/projects" },
-        ]}
-      />
-      <div className="curri__content" ref={paperRef}>
+      <div className="curri__text" onClick={setIsOpen}>
+        Voir mon parcours
+      </div>
+
+      <div className={className} onClick={setIsOpen} ref={divEl}>
         <div className="curri">
           <div className="curri__title">
             <h4 className="curri__title__text">Curriculum vitae</h4>

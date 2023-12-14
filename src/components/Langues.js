@@ -1,4 +1,4 @@
-import earth from "../earth.png";
+import earth from "../img/earth.png";
 function Langues() {
   return (
     <div className="lan">

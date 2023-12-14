@@ -21,14 +21,31 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  // overflow: hidden;
+  @media screen and (min-width: 1500px){
+    font-size: 80%;
+}
+@media screen and (max-width: 1100px){
+  font-size: 60%;
+}
+@media screen and (max-width: 900px){
+  font-size: 55%;
+}
 }
 body {
   background-color: black;
   color: white;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  // overflow-y: hidden;
 }
 
 .layout {
   // height: 200vh;
+  // overflow-x: hidden;
+  // background-color: aqua;
+  // border: 2px solid blue;
+  // overflow: hidden;
+  perspective: 150rem;
+  perspective-origin: bottom ;
 }

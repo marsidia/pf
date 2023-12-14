@@ -1,0 +1,180 @@
+.frame{
+    // background-color: rgb(42, 165, 42);
+    // filter: blur(10px);
+    // position: sticky;
+    // top: 30%;
+    background-color: rgb(77, 38, 10);
+    height: 40rem;
+    width: 40rem;
+    @media screen and (max-width: 450px){
+        height: 30rem;
+        width: 30rem;
+    }
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 15px brown, 0 0 15px rgba(0, 0, 0, 0.473);
+    border-radius: 4px;
+    color: #4c4c66;
+    &--1{
+        color: rgb(80, 95, 80);
+    }
+
+    &__border{
+        background-color: brown;
+        box-shadow: inset  0 0 5px rgb(80, 42, 15), 0 0 5px brown;
+
+        border-radius: 4px;
+
+        height: 97%;
+        width: 97%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
+
+    }
+    &__content{
+         background-color: bisque;
+        height: 97%;
+        width: 97%;
+        // box-shadow: inset 0 0 15px brown; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__background{
+        position: relative;
+        height: 95%;
+        width: 95%;
+        // margin: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+       
+        // background: 
+        // radial-gradient(ellipse at top, #e66465 20%, blue 20%, blue 60%, #e66465 60%),
+        // radial-gradient(ellipse at bottom, #4d9f0c 50%, orange 50%);
+        background-image:
+	linear-gradient(180deg, transparent 50%, bisque 50%),
+	linear-gradient(192deg, transparent 50%, currentColor 50%),
+	linear-gradient(204deg, transparent 50%, bisque 50%),
+	linear-gradient(216deg, transparent 50%, currentColor 50%),
+	linear-gradient(228deg, transparent 50%, bisque 50%),
+	linear-gradient(240deg, transparent 50%, currentColor 50%),
+	linear-gradient(252deg, transparent 50%, bisque 50%),
+	linear-gradient(264deg, transparent 50%, currentColor 50%),
+	linear-gradient(276deg, transparent 50%, bisque 50%),
+	linear-gradient(288deg, transparent 50%, currentColor 50%),
+	linear-gradient(300deg, transparent 50%, bisque 50%),
+	linear-gradient(312deg, transparent 50%, currentColor 50%),
+	linear-gradient(324deg, transparent 50%, bisque 50%),
+	linear-gradient(336deg, transparent 50%, currentColor 50%),
+	linear-gradient(348deg, transparent 50%, bisque 50%),
+	linear-gradient(360deg, transparent 50%, currentColor 50%);
+    
+
+    }
+    &__text{
+        z-index: 10;
+        font-size: 7rem;
+        color: #813c3c;
+       
+        
+        background-color: #4c4c66;
+        height: 50%;
+        width: 50%;
+        border: 2rem solid bisque;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Cookie", cursive;
+        text-transform: capitalize;
+  
+      
+        // border-bottom: 3px solid blue;
+        h3{
+            
+            
+
+            position: absolute;
+            transform: skew(-10deg ,-15deg);
+            text-shadow: 3px 0 0px bisque,
+            -3px 0 0px bisque,
+            0 3px 0px bisque,
+            0 -3px 0px bisque,
+            3px 3px 0px bisque,
+            -3px -3px 0px bisque,
+            -3px 3px 0px bisque,
+            3px -3px 0px bisque
+            ;
+        }
+        &--1{
+            background-color: rgb(80, 95, 80);
+            width: 100%;
+            border-radius: 0;
+            border: 1rem solid bisque;
+            // border: none;
+            color: rgb(122, 82, 120);
+            font-family: "DM Serif Display", serif;
+            text-transform: uppercase;
+            font-size: 4rem;
+            text-align: center;
+            h3{
+            
+            
+
+                position: absolute;
+                transform: skew(0deg ,0deg);
+                // text-shadow: 3px 0 0px rgb(4, 4, 65),
+                // -3px 0 0px bisque,
+                // 0 3px 0px bisque,
+                // 0 -3px 0px bisque,
+                // 3px 3px 0px bisque,
+                // -3px -3px 0px bisque,
+                // -3px 3px 0px bisque,
+                // 3px -3px 0px bisque
+                ;
+            }
+            
+        }
+        @media screen and (max-width: 450px){
+            font-size: 2rem;
+        }
+    }
+    &__bottom{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        clip-path: inset(50% 0 0 0);
+        // background-color: aqua;
+        // background:  linear-gradient(0deg, #4c4c66 50%, bisque 50%);
+        // background-size: 40px 40px;
+
+        background-image:
+	linear-gradient(0deg, transparent 50%, currentColor 50%),
+	linear-gradient(12deg, transparent 50%, bisque 50%),
+	linear-gradient(24deg, transparent 50%, currentColor 50%),
+	linear-gradient(36deg, transparent 50%, bisque 50%),
+	linear-gradient(48deg, transparent 50%, currentColor 50%),
+	linear-gradient(60deg, transparent 50%, bisque 50%),
+	linear-gradient(72deg, transparent 50%, currentColor 50%),
+	linear-gradient(84deg, transparent 50%, bisque 50%),
+	linear-gradient(96deg, transparent 50%, currentColor 50%),
+	linear-gradient(108deg, transparent 50%, bisque 50%),
+	linear-gradient(120deg, transparent 50%, currentColor 50%),
+	linear-gradient(132deg, transparent 50%, bisque 50%),
+	linear-gradient(144deg, transparent 50%, currentColor 50%),
+	linear-gradient(156deg, transparent 50%, bisque 50%),
+	linear-gradient(168deg, transparent 50%, currentColor 50%),
+	linear-gradient(180deg, transparent 50%, bisque 50%);
+    }
+    
+}
